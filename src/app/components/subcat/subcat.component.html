@@ -1,0 +1,6 @@
+<h4 style="text-align:center ;">Sub Categories</h4>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let subCategory of subCategories">
+        <a href="{{'/products/sub/'+ subCategory.catId +'/'+ subCategory.subId}}">{{subCategory.subName}}</a>
+    </li>
+</ul>

@@ -1,0 +1,19 @@
+<h4 style="text-align:center ;">Products</h4>
+<div class="row">
+    <div class="col-sm-4" *ngFor="let product of products">
+      <div class="card">
+        <img src="{{'http://rjtmobile.com/grocery/images/'+product.image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{product.productName}}</h5>
+          <h5 class="card-title">
+            {{product.price | currency:'INR'}}
+            <span class="mrp">
+                <s>{{product.mrp | currency:'INR'}}</s>
+            </span>
+        </h5>
+          <p class="card-text">{{product.description}}</p>
+          <a routerLink="{{'/products/details/'+product._id}}" class="btn btn-primary">Select</a>
+        </div>
+      </div>
+    </div>
+  </div>
